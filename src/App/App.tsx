@@ -8,10 +8,11 @@ import ImageModal from "../components/ImageModal/ImageModal";
 import toast, { Toaster } from "react-hot-toast";
 import { fetchImages } from "../components/Api/api";
 import "../App.css";
-import Modal from "react-modal";
+// import Modal from "react-modal";
+
 import { Image } from "./App.types";
 
-Modal.setAppElement("#root");
+// Modal.setAppElement("#root");
 
 const App: React.FC = () => {
   const [images, setImages] = useState<string>([]);
@@ -94,7 +95,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div id="root">
+    <div>
       <Toaster />
       <header>
         <SearchBar onSubmit={handleSearchSubmit} />
