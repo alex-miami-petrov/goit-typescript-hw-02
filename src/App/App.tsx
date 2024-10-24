@@ -15,7 +15,7 @@ import { Image } from "./App.types";
 // Modal.setAppElement("#root");
 
 const App: React.FC = () => {
-  const [images, setImages] = useState<string>([]);
+  const [images, setImages] = useState<Image[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
@@ -35,9 +35,12 @@ const App: React.FC = () => {
       try {
         const data = await fetchImages(query, page);
         if (data.results.length === 0) {
-          toast("No more images found", { type: "info" });
+          toast("No more images found", { icon: "ℹ️" });
         }
-        setImages((prevImages) => [...prevImages, ...data.results]);
+        setImages((prevImages) => [
+          ...prevImages,
+          ...(data.results as Image[]),
+        ]);
       } catch (err) {
         setError("Failed to fetch images. Please try again.");
       } finally {
