@@ -1,8 +1,8 @@
 #root {
-  margin: 0; /* Вирівнювання без додаткових відступів */
-  padding: 0; /* Вирівнювання без додаткових відступів */
-  width: 100vw; /* Займає всю ширину viewport */
-  box-sizing: border-box; /* Включення padding у ширину */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 header {
@@ -18,13 +18,11 @@ header {
   justify-content: center;
 }
 
-/* Стилі для form */
 form {
   display: flex;
   align-items: center;
 }
 
-/* Стилі для input */
 input[type="text"] {
   padding: 8px;
   font-size: 16px;
@@ -34,7 +32,6 @@ input[type="text"] {
   width: 400px;
 }
 
-/* Стилі для button */
 button {
   padding: 8px 16px;
   font-size: 16px;
@@ -48,7 +45,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Стилі для ul */
 ul {
   list-style-type: none;
 }
@@ -106,7 +102,7 @@ button:focus-visible {
 }
 
 .load-more-btn {
-  background-color: #007bff;
+  background-color: blue;
   color: white;
   border: none;
   padding: 10px 20px;

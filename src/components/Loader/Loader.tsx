@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Bars } from "react-loader-spinner";
 
-const Loader = () => {
-  const loaderRef = useRef(null);
+const Loader: React.FC = () => {
+  const loaderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (loaderRef.current) {

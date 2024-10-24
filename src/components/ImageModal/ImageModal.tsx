@@ -1,16 +1,16 @@
 import React from "react";
 import Modal from "react-modal";
-import PropTypes from "prop-types";
 import "./ImageModal.css";
+import { ImageModalProps } from "./ImageModal.types";
 
 Modal.setAppElement("#root");
 
-const ImageModal = ({ image, onClose }) => {
+const ImageModal: React.FC<ImageModalProps> = ({ image, onClose }) => {
   if (!image) return null;
 
   return (
     <Modal
-      isOpen={!!image}
+      isOpen={true}
       onRequestClose={onClose}
       contentLabel="Image Modal"
       className="modal"
@@ -25,16 +25,6 @@ const ImageModal = ({ image, onClose }) => {
       />
     </Modal>
   );
-};
-
-ImageModal.propTypes = {
-  image: PropTypes.shape({
-    urls: PropTypes.shape({
-      regular: PropTypes.string.isRequired,
-    }).isRequired,
-    alt_description: PropTypes.string.isRequired,
-  }),
-  onClose: PropTypes.func.isRequired,
 };
 
 export default ImageModal;

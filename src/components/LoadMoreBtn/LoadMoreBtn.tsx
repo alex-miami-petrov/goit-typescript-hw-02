@@ -1,16 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { LoadMoreBtnProps } from "./LoadMoreBtn.types";
 
-const LoadMoreBtn = ({ onClick }) => {
+const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ onClick }) => {
   return (
     <button onClick={onClick} className="load-more-btn">
       Load More
     </button>
   );
-};
-
-LoadMoreBtn.propTypes = {
-  onClick: PropTypes.func.isRequired,
 };
 
 export default LoadMoreBtn;
