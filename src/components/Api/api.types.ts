@@ -1,4 +1,4 @@
-export interface UnsplashPhoto {
+export interface Image {
   id: string;
   alt_description: string | null;
   urls: {
@@ -8,8 +8,8 @@ export interface UnsplashPhoto {
   };
 }
 
-export interface UnsplashResponse {
-  results: UnsplashPhoto[];
+export interface ImageResponse {
+  results: Image[];
   total: number;
   total_pages: number;
 }
