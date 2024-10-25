@@ -10,7 +10,7 @@ import { fetchImages } from "../components/Api/api";
 import "../App.css";
 // import Modal from "react-modal";
 
-import { Image } from "./App.types";
+import { Image } from "../components/Api/api.types";
 
 // Modal.setAppElement("#root");
 
